@@ -1,0 +1,81 @@
+
+<section class=" container pt-3 ">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BORASCOPE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Settings
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/log/1">History Log</a></li>
+                            <li><a class="dropdown-item" href="/Users/1">Usuarios</a></li>
+                            
+                        </ul>
+                    </li>
+
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class=" py-3 d-flex h-100">
+        <aside class="aside p-5 mt-2 mb-5 d-flex flex-column justify-content-center">
+            <ul>
+                <li><a class="text-start mb-3" href="/Home"><img src="/resources/icons/home.svg" alt=""> Home</a></li>
+    
+                <li><a class="text-start mb-3" href="/nuevoPaciente"><img src="/resources/icons/user-plus.svg" alt=""> Nuevo Paciente</a></li>
+           
+                <li><a class="text-start mb-3" href="/Pacientes/1"><img src="/resources/icons/users.svg" alt=""> Pacientes </a></li>
+                
+                <li><a class="text-start mb-3" href="/citas/1"><img src="/resources/icons/list.svg" alt=""> Citas</a></li>
+                
+                <li><a class="text-start mb-3" href="/logout"><img src="/resources/icons/log-out.svg" alt=""> Log out</a></li>
+            </ul>
+        </aside>
+
+        <div class="indexBody container position-relative px-3 py-5">
+            {{#each indexObject}}
+                <h1 class="welcome">Bienvenido {{nombre}}</h1>
+       {{/each}}
+            <div class="container p-3 mt-5 indexBody">
+                <a href="/nuevoPaciente"class="box boxOne m-1 shadow"><div >Add Paciente</div></a>
+                <a href="/Pacientes/1" class="box boxTwo m-1 shadow" style="background-color: #F1B46A;"><div><img src="/resources/icons/users.svg" alt=""><h4>Lista de Pacientes</h4></div></a>
+                {{#each indexObject}}<div class="box boxThree m-1 shadow" style="background-color: #f2cfa4;"><h5>{{tiempo}}</h5></div>{{/each}}
+                <a href="/downloadEmpty" class="box boxFour m-1 shadow" style="background-color: #fff;"><div><h4>Descargar <br> Plantilla</h4></div></a>
+                <a href="/Citas/1" class="box boxFive m-1 shadow" style="background-color: #f2cfa4;">
+                <h3>Citas de Hoy</h3>
+                <ul class=" list-group list-group-flush">
+                    {{#each rows}}
+                        <li class="list-group-item">{{nombre}} a las {{hora}}</li>
+                    {{/each}} 
+                </ul></a>
+            </div>
+        </div>
+
+        <aside class="asider p-2 mt-2 mb-5 d-flex flex-column justify-content-start">
+            <div class="userData d-flex mt-5">
+                <div class="imgside my-4 ms-4">
+                    <img width="50px" src="/resources/images/avatarM.svg" alt="">
+                </div>
+                <div class="infoSide m-4 me-4">
+                    {{#each indexObject}}
+                    <h4>{{usuario}}</h4>
+                    {{/each}}
+                </div>
+                
+            </div>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+
+        </aside>
+    </div>
+</section>

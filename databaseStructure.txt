@@ -1,0 +1,10 @@
+CREATE TABLE actions (id, actionName);
+CREATE TABLE citas (id INTEGER PRIMARY KEY, fecha, hora, nombre, area, active) // active is to show them on TABLE
+CREATE TABLE company (id INTEGER PRIMARY KEY, nombre, direccion, rif, otros)
+CREATE TABLE consultas (id INTEGER PRIMARY KEY, cedula, nombreDr, fechaConsulta, Observaciones)
+CREATE TABLE log (id INTEGER PRIMARY KEY, fecha, nombre, action, actionId)
+CREATE TABLE pacientes (id INTEGER PRIMARY KEY, cedula, nombre, apellidos, edad, fechaNac, sexo) // add: 
+CREATE TABLE pacientesContact (id INTEGER PRIMARY, cedula, telefono, direccion, email, seguro, representante)
+CREATE TABLE pacientesHistoria (id INTEGER PRIMARY KEY, cedula, sangre, motivoConsulta, ) //quitar sangre y patologias
+CREATE TABLE users (id INTEGER PRIMARY KEY,nombre, username, password, admin)
+CREATE TABLE historiaDocs (id INTEGER PRIMARY KEY, cedula, filename, updated)

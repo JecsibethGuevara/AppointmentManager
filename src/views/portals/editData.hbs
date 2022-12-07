@@ -1,0 +1,77 @@
+<section class=" container pt-3 ">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BORASCOPE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Settings
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/log/1">History Log</a></li>
+                            <li><a class="dropdown-item" href="/Users/1">Usuarios</a></li>
+                           
+                        </ul>
+                    </li>
+
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container py-3 d-flex h-100">
+        <aside class="aside p-5 mt-2 mb-5 d-flex flex-column justify-content-center">
+            <ul>
+                <li><a class="text-start mb-3" href="/Home"><img src="/resources/icons/home.svg" alt=""> Home</a></li>
+    
+                <li><a class="text-start mb-3" href="/nuevoPaciente"><img src="/resources/icons/user-plus.svg" alt=""> Nuevo Paciente</a></li>
+           
+                <li><a class="text-start mb-3" href="/Pacientes/1"><img src="/resources/icons/users.svg" alt=""> Pacientes </a></li>
+                
+                <li><a class="text-start mb-3" href="/citas/1"><img src="/resources/icons/list.svg" alt=""> Citas</a></li>
+                
+                <li><a class="text-start mb-3" href="/logout"><img src="/resources/icons/log-out.svg" alt=""> Log out</a></li>
+            </ul>
+        </aside>
+        <div class="container contentContainers">
+            <div class="header mt-5 p-3 d-flex">
+                    <a href="/Home"><img width="50px" src="/resources/icons/chevrons-left.svg" alt=""></a>
+                    <h1>Datos de la Compañia </h1>
+                </div> 
+            <form class="mt-5 px-5"  action="/editData" method="POST" id="form">
+				<div class="form-floating mb-2 pt-2">
+                    <input type="text" class="form-control " id="nombre" name="nombre"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Nombre </label>
+                </div>
+				<div class="form-floating mb-2 pt-2">
+                    <input type="text" class="form-control " id="username" name="direccion"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Direccion </label>
+                </div>
+				<div class="form-floating mb-2 pt-2">
+                    <input type="text" class="form-control " id="password" name="rif"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Rif </label>
+                </div>
+				<div class="form-floating mb-2 pt-2">
+                    <input type="text" class="form-control " id="password" name="otros"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Otros </label>
+                </div>
+
+                                
+            	<input type="submit" class="btn btn-success mt-4" value="Registrar">
+            </form>
+        </div>
+    </div>
+</section>

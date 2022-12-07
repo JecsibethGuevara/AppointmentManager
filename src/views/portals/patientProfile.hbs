@@ -1,0 +1,209 @@
+
+<section class=" container pt-3 ">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BORASCOPE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Settings
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/log/1">History Log</a></li>
+                            <li><a class="dropdown-item" href="/Users/1">Usuarios</a></li>
+                            
+                        </ul>
+                    </li>
+
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="container py-3 d-flex h-100">
+        <aside class="aside p-5 mt-2 mb-5 d-flex flex-column justify-content-center">
+            <ul>
+                <li><a class="text-start mb-3" href="/Home"><img src="/resources/icons/home.svg" alt=""> Home</a></li>
+    
+                <li><a class="text-start mb-3" href="/nuevoPaciente"><img src="/resources/icons/user-plus.svg" alt=""> Nuevo Paciente</a></li>
+           
+                <li><a class="text-start mb-3" href="/Pacientes/1"><img src="/resources/icons/users.svg" alt=""> Pacientes </a></li>
+                
+                <li><a class="text-start mb-3" href="/citas/1"><img src="/resources/icons/list.svg" alt=""> Citas</a></li>
+                
+                <li><a class="text-start mb-3" href="/logout"><img src="/resources/icons/log-out.svg" alt=""> Log out</a></li>
+            </ul>
+        </aside>
+            {{#each rows}}
+        <div class="container contentContainers">
+            <div class="header mt-5 p-3 d-flex">
+                <a href="/Home"><img width="50px" src="/resources/icons/chevrons-left.svg" alt=""></a>
+                <h1>{{nombre}} {{apellido}}</h1> 
+                <a class="mx-4 btn btn-success" href="/download/{{cedula}}">Descargar pdf</a>
+            </div> 
+
+            <div class="m-2">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Informacion Personal
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body d-flex flex-column align-items-stretch">
+
+                                <div class="d-flex">
+                                    <div class="value border px-3 d-flex flex-fill">
+                                        <p class="px-3">Cedula:</p>
+                                        <p class="px-3" id="cedulaP">{{cedula}}</p>
+                                    </div>
+                                    <div class="value px-3 border d-flex flex-fill">
+                                        <p class="px-3">Nombres:</p>
+                                        <p class="px-3">{{nombre}} {{apellido}}</p>
+                                    </div>  
+                                
+                                    <div class="value border d-flex flex-fill px-3">
+                                        <p class="px-3">Edad:</p>
+                                        <p class="px-3">{{edad}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex">
+                                    <div class="value border d-flex flex-fill px-3">
+                                        <p class="px-3">Fecha de Nacimiento:</p>
+                                        <p class="px-3">{{fechaNac}}</p>
+                                    </div>
+                                    <div class="value border d-flex flex-fill px-3">
+                                        <p class="px-3">Sexo:</p>
+                                        <p class="px-3">{{sexo}}</p>
+                                    </div>
+                                    <div class="value border d-flex flex-fill px-3">
+                                        <p class="px-3">Estado Civil:</p>
+                                        <p class="px-3">{{estadoCivil}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex">
+                                    <div class="value border d-flex flex-fill px-3">
+                                    <p class="px-3"> Ocupacion:</p>
+                                    <p class="px-3">{{ocupacion}}</p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+
+
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            Informacion de Contacto
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body d-flex flex-column align-items-stretch">
+                                <div class="d-flex">
+                                    <div class="d-flex flex-fill value border px-3">
+                                        <p class="p-3">Telefono:</p>
+                                        <p class="p-3">{{telefono}}</p>
+                                    </div>
+                                    <div class="d-flex flex-fill value border px-3">
+                                        <p class="p-3">Direccion:</p>
+                                        <p class="p-3">{{direccion}}</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-flex flex-fill value border px-3">
+                                        <p class="p-3">Telefono Oficina:</p>
+                                        <p class="p-3">{{telefonoOficina}}</p>
+                                    </div>
+                                    <div class="d-flex flex-fill value border px-3">
+                                        <p class="p-3">Direccion Oficina:</p>
+                                        <p class="p-3">{{direccionOficina}}</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-flex flex-fill value border px-3">
+                                        <p class="px-3">Email:</p>
+                                        <p class="px-3">{{email}}</p>
+                                    </div>
+                                    <div class="d-flex flex-fill value border px-3">
+                                        <p class="px-3">Seguro:</p>
+                                        <p class="px-3">{{seguro}}</p>
+                                    </div>
+                                    <div class="d-flex flex-fill value border px-3">
+                                        <p class="px-3">representante:</p>
+                                        <p class="px-3">{{representante}}</p>
+                                    </div>
+                                    
+
+                                </div>
+                               
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            Informacion Clinica
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body d-flex flex-column align-items-stretch">
+                            <div class="d-flex">
+                            
+                                <div class="value d-flex flex-fill px-3 border">
+                                    <p class="px-3">Antecedentes:</p>
+                                    <p class="px-3">{{patologias}}</p>
+                                </div>
+                                
+                            </div>
+                            <div class="d-flex">
+                                <div class="value d-flex flex-fill px-3 border">
+                                    <p class="p-3">Motivo de Consulta:</p>
+                                    <p class="p-3">{{motivoConsulta}}</p>
+                                </div>
+                            </div>
+
+                            {{/each}}
+                            {{#each result}}
+                            <div class="d-flex">
+                                <div class="value d-flex flex-fill px-3 border">
+                                    <p class="p-3">Fecha:</p>
+                                    <p class="p-3">{{fechaConsulta}}</p>
+                                </div>
+                                <div class="value d-flex flex-fill px-3 border">
+                                    <p class="p-3">Observaciones:</p>
+                                    <p class="p-3">{{Observaciones}}</p>
+                                </div>
+                            </div>
+                            {{/each}}
+                            <div id="observacionesDiv">
+
+                            </div>{{#each rows}}
+                            <a class="btn btn-success" href="/consulta/{{cedula}}">Agregar Nuevas Observaciones</a>{{/each}}
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>

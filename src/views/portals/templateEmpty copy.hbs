@@ -1,0 +1,90 @@
+<div class="container" style="padding:2rem; border:1px solid black; height: 100%; max-width: 80%; margin: auto;">
+        <div class="header" style="border-bottom: 1px solid black;">
+            {{#each rows}}
+           <p>Nro de historia:<h3>{{id}}</h3></p> 
+            {{/each}}
+        </div>
+        <div class="containerBody" style="border:1px solid black; margin: 10px;">
+
+            <table style="width:100%; margin: auto;">
+                <tr>
+                    <td colspan="5" style="text-align: center;"><h3 >Informacion Personal</h3></td>
+                </tr>
+                <tr>
+                    <td colspan="1"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Cedula: <span style="font-weight: lighter;">{{cedula}}</span>  </p></td>
+                    <td colspan="1"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Nombre: <span style="font-weight: lighter;">{{nombre}}</span>  </p></td>
+                    <td colspan="2"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Apellido: <span style="font-weight: lighter;">{{apellido}}</span>  </p></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="1"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Edad: <span style="font-weight: lighter;">{{edad}}</span>  </p></td>
+                    <td colspan="2"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Fecha de Nacimiento: <span style="font-weight: lighter;">{{fechaNac}}</span>  </p></td>
+                    <td colspan="2"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Sexo: <span style="font-weight: lighter;">{{sexo}}</span>  </p></td>
+                    
+                </tr>
+            </table>
+            
+            
+            
+            <table style="width:100%; margin: auto;">
+                <tr>
+                    <td colspan="5" style="text-align: center;"><h3 >Informacion de Contacto</h3></td>
+                </tr>
+                <tr>
+                    <td colspan="1"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Telefono: <span style="font-weight: lighter;">{{telefono}}</span>  </p></td>
+                    <td colspan="1"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Email: <span style="font-weight: lighter;">{{email}}</span>  </p></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="1"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Seguro: <span style="font-weight: lighter;">{{seguro}}</span>  </p></td>
+                    <td colspan="2"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Representante: <span style="font-weight: lighter;">{{representante}}</span>  </p></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Direccion: <span style="font-weight: lighter;">{{direccion}}</span>  </p></td>
+                    
+                </tr>
+                
+            </table>
+
+
+            <table style="width:100%; margin: auto;">
+                <tr>
+                    <td colspan="5" style="text-align: center;"><h3 >Informacion Medica</h3></td>
+                </tr>
+                <tr>
+                    <td colspan="1"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Tipo Sanguineo: <span style="font-weight: lighter;">{{sangre}}</span>  </p></td>
+                    <td colspan="1"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Patologias Conocidas: <span style="font-weight: lighter;">{{patologias}}</span>  </p></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td colspan="2"> <p style="padding:15px; font-weight: bolder; border: 1px solid black; margin: 0;"> Motivo de Consulta: <span style="font-weight: lighter;">{{motivoConsulta}}</span>  </p></td>
+                    
+                </tr>
+               
+                <tr aria-colspan="4">
+                    <div class="two" style="border:1px solid black; display: flex; justify-content: center;">
+                        <table border="1px" style="border:1px solid black; flex: 1; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Fecha Consulta</th>
+                                    <th>Observaciones de Consulta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            
+                                <tr >
+                                    <td style="padding: 10px;">{{fechaConsulta}}</td>
+                                    <td style="padding: 10px;">{{Observaciones}}</td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                   </div>
+                </tr>
+            </table>
+
+        </div>
+        
+    </div>
